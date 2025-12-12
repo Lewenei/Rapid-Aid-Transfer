@@ -64,4 +64,56 @@ RapidAidTransfer is designed for small NGOs, startups, and local initiatives to 
 ## 📁 Project Structure
 
 
+---
 
+rapidaidtransfer/
+├── app/
+│   ├── __init__.py
+│   ├── main.py                 # FastAPI app instance
+│   ├── api/                    # All routers
+│   │   ├── __init__.py
+│   │   ├── v1/
+│   │       ├── __init__.py
+│   │       ├── router.py       # includes all v1 endpoints
+│   │       ├── auth.py
+│   │       ├── users.py
+│   │       ├── programs.py
+│   │       ├── beneficiaries.py
+│   │       ├── disbursements.py
+│   │       └── geofence.py
+│   ├── core/
+│   │   ├── config.py           # settings with Pydantic BaseSettings
+│   │   ├── security.py         # JWT utils
+│   │   └── database.py         # SQLAlchemy session + engine
+│   ├── models/                 # SQLAlchemy models
+│   │   ├── __init__.py
+│   │   ├── user.py
+│   │   ├── program.py
+│   │   ├── beneficiary.py
+│   │   ├── disbursement.py
+│   │   └── geofence.py
+│   ├── schemas/                # Pydantic schemas
+│   │   ├── __init__.py
+│   │   ├── user.py
+│   │   ├── program.py
+│   │   ├── beneficiary.py
+│   │   └── disbursement.py
+│   ├── crud/                   # Database operations
+│   │   ├── __init__.py
+│   │   ├── user.py
+│   │   ├── beneficiary.py
+│   │   └── disbursement.py
+│   ├── utils/
+│   │   └── mpesa.py            # M-Pesa B2C wrapper (later)
+│   └── dependencies.py         # get_db, get_current_user, etc.
+├── alembic/                    # Migrations
+├── tests/
+│   └── conftest.py
+├── .env
+├── .gitignore
+├── requirements.txt
+└── README.md
+
+---
+
+---
