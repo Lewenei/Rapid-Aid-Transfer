@@ -63,57 +63,57 @@ RapidAidTransfer is designed for small NGOs, startups, and local initiatives to 
 
 ## 📁 Project Structure
 
-
----
-
-rapidaidtransfer/
-├── app/
+── backend
+│   ├── app
+│   │   ├── core
+│   │   ├── __init__.py
+│   │   ├── main.py
+│   │   ├── models
+│   │   └── __pycache__
+│   ├── core
 │   ├── __init__.py
-│   ├── main.py                 # FastAPI app instance
-│   ├── api/                    # All routers
+│   ├── __pycache__
+│   │   └── __init__.cpython-312.pyc
+│   ├── requirements.txt
+│   ├── tests
+│   │   ├── conftest.py
 │   │   ├── __init__.py
-│   │   ├── v1/
-│   │       ├── __init__.py
-│   │       ├── router.py       # includes all v1 endpoints
-│   │       ├── auth.py
-│   │       ├── users.py
-│   │       ├── programs.py
-│   │       ├── beneficiaries.py
-│   │       ├── disbursements.py
-│   │       └── geofence.py
-│   ├── core/
-│   │   ├── config.py           # settings with Pydantic BaseSettings
-│   │   ├── security.py         # JWT utils
-│   │   └── database.py         # SQLAlchemy session + engine
-│   ├── models/                 # SQLAlchemy models
-│   │   ├── __init__.py
-│   │   ├── user.py
-│   │   ├── program.py
-│   │   ├── beneficiary.py
-│   │   ├── disbursement.py
-│   │   └── geofence.py
-│   ├── schemas/                # Pydantic schemas
-│   │   ├── __init__.py
-│   │   ├── user.py
-│   │   ├── program.py
-│   │   ├── beneficiary.py
-│   │   └── disbursement.py
-│   ├── crud/                   # Database operations
-│   │   ├── __init__.py
-│   │   ├── user.py
-│   │   ├── beneficiary.py
-│   │   └── disbursement.py
-│   ├── utils/
-│   │   └── mpesa.py            # M-Pesa B2C wrapper (later)
-│   └── dependencies.py         # get_db, get_current_user, etc.
-├── alembic/                    # Migrations
-├── tests/
-│   └── conftest.py
-├── .env
-├── .gitignore
-├── requirements.txt
-└── README.md
-
----
-
----
+│   │   ├── __pycache__
+│   │   ├── test_main.py
+│   │   └── test_models.py
+│   └── venv
+│       ├── bin
+│       ├── include
+│       ├── lib
+│       ├── lib64 -> lib
+│       └── pyvenv.cfg
+├── frontend
+├── pytest.ini
+├── README.md
+└── venv
+    ├── bin
+    │   ├── activate
+    │   ├── activate.csh
+    │   ├── activate.fish
+    │   ├── Activate.ps1
+    │   ├── alembic
+    │   ├── fastapi
+    │   ├── httpx
+    │   ├── mako-render
+    │   ├── pip
+    │   ├── pip3
+    │   ├── pip3.12
+    │   ├── pygmentize
+    │   ├── py.test
+    │   ├── pytest
+    │   ├── python -> python3
+    │   ├── python3 -> /usr/bin/python3
+    │   ├── python3.12 -> python3
+    │   └── uvicorn
+    ├── include
+    │   ├── python3.12
+    │   └── site
+    ├── lib
+    │   └── python3.12
+    ├── lib64 -> lib
+    └── pyvenv.cfg
