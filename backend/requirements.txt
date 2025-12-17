@@ -1,8 +1,0 @@
-fastapi
-uvicorn
-sqlalchemy
-alembic
-pydantic
-pytest
-psycopg2
-geoalchemy2
